@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - Hidden Subset</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+		 <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - Hidden Subset </h2>
+	 <p class="style13" align="justify">This technique is known as 
+"hidden pair" if two candidates are involved, "hidden triplet" if three,
+ or "hidden quad" if four. It is sometimes also called "unique subset".</p>
+          <p class="style13" align="justify">This technique is very 
+similar to naked subsets, but instead of affecting other cells with the 
+same row, column or block, candidates are eliminated from the cells that
+ hold the subset. If there are N cells, with N candidates between them 
+that don't appear elsewhere in the same row, column or block, then any 
+other candidates for those cells can be eliminated.</p>
+          <p class="style13" align="justify">For example, consider a block that has the following candidates:</p>
+          <p class="style13" align="justify">{4, 5, 6, 9}, {4, 9}, {5, 6, 9}, {2, 4}, {1, 2, 3, 4, 7}, {1, 2, 3, 7}, {2, 5, 6}, {1, 2, 7}, {8}</p>
+          <p class="style13" align="justify">(The single {8} indicates 
+that this cell already holds the value 8.) You can see that there are 
+only three cells that have any of the candidates 1, 3 or 7. (These cells
+ have other candidates too, but they're the ones that we can eliminate.)
+ Three candidates with only three possible cells between them means that
+ one of the candidates must be in each of the cells. So, obviously, 
+these three cells cannot hold any other value, meaning we can eliminate 
+any other candidates for these cells.</p>
+          <p class="style13" align="justify">In this example, we're left with:</p>
+          <p class="style13" align="justify">{4, 5, 6, 9}, {4, 9}, {5, 6, 9}, {2, 4}, {1, 3, 7}, {1, 3, 7}, {2, 5, 6}, {1, 7}, {8}</p>
+          <p class="style13" align="justify">Naked subsets and hidden 
+subsets are related - I usually describe them as being opposite sides of
+ the same coin. If a naked subset is present, then so is a hidden one, 
+although it may be longer and so harder to spot. The opposite is also 
+true, if a hidden subset is present, so is a naked one. They obey the 
+following relationship:</p>
+          <p class="style7" align="justify">NumberOfDigitsInNakedSubset + NumberOfDigitsInHiddenSubset + NumberOfFilledCellsInUnit = 9</p>
+          <p class="style13" align="justify">or to put it another way:</p>
+          <p class="style7" align="justify">NumberOfDigitsInNakedSubset + NumberOfDigitsInHiddenSubset = NumberOfEmptyCellsInUnit</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

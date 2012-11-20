@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - Remote Pairs</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+		      <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - Remote Pairs </h2>
+	<p class="style13" align="justify">This technique is a combination of <a href="http://www.sudokuonline.us/naked_subset.php">naked pairs</a> and <a href="http://www.sudokuonline.us/coloring.php">colouring</a>. Consider the following puzzle:</p>
+          <p class="style13" align="justify"><img src="remote_pairs_files/remote_pairs.jpg" height="245" width="448"></p>
+          <p class="style13" align="justify">(The numbers in curly brackets { } are the candidates for the cell.)</p>
+          <p class="style13" align="justify">Consider the chain of cells r2c6, r2c8, r3c7 and r4c7. We notice that<br>
+            if r2c6 is 1 then r2c8 is 2, so r3c7 is 1, so r4c7 is 2. </p>
+          <p class="style13" align="justify">and<br>
+            if r2c6 is 2 then r2c8 is 1, so r3c7 is 2, so r4c7 is 1. </p>
+          <p class="style13" align="justify">So, in a similar manner to 
+simple colouring, we can be sure that any cells that share units with 
+both r2c6 and r4c7 cannot be 1 or 2. So in this example, we can 
+eliminate 1 and 2 from the candidates for r4c6.</p>
+          <p class="style13" align="justify">Note: the chain must 
+contain an even number of cells or else elimination is not possible. For
+ example, consider the chain r2c8, r3c7 and r4c7. You might think that 
+these would allow elimination of 1 and 2 in r5c8, but this is not the 
+case. If r2c8 is 1, so is r4c7, and if r2c8 is 2, so is r4c7. All we 
+know is that both cells contain the same number, but not which one it 
+is. We cannot make any elimination to r5c8.</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

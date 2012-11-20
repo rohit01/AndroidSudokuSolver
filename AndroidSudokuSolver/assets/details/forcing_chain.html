@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - Forcing Chains</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+		<tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - Forcing Chains </h2>
+		<p class="style13" align="justify">Forcing chains is a 
+technique that allows you to deduce with certainty the content of a cell
+ from considering the implications resulting from the placement of each 
+of another cell's candidates. (This technique is also know as 
+"double-implication chains".)</p>
+          <p class="style13" align="justify">For example, in the following puzzle:</p>
+          <p class="style13" align="justify"><img src="forcing_chain_files/forcing-chains.jpg" height="245" width="388"></p>
+          <p class="style13" align="justify">(The numbers is curly brackets { } are the candidates for the cell.)</p>
+          <p class="style13" align="justify">Consider r1c2. This has the two candidates, 2 and 7. We will consider the implications of each of these candidates in turn.</p>
+          <p class="style13" align="justify">if r1c2 = 2, then r2c1 = 1, and r5c1 = 2</p>
+          <p class="style13" align="justify">if r1c2 = 7, then r1c7 = 3, and r5c7 = 1, and r5c1 = 2</p>
+          <p class="style13" align="justify">So whichever of the two 
+possible values are placed into (1, 2), we've deduced that (5, 1) must 
+hold a 2. In other words, whichever chain of cells we follow, a certain 
+cell is forced to have a specific value.</p>
+          <p class="style13" align="justify">Note: unless the puzzle has
+ multiple solutions, one of the considered candidates must be incorrect.
+ This means it must eventually lead to either a contradiction or a dead 
+end. If, when considering a single candidate, you reach a dead end, or 
+find two chains that lead to different conclusions, you can eliminate 
+that candidate from the starting cell. This is verging onto 
+trial-and-error, and SadMan Software Sudoku doesn't do this as part of 
+the forcing chain strategy. However, it can be useful when solving 
+manually</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

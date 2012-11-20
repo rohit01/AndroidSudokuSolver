@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="systemTableName">SYSTEM_SUDOKU</string>
+    <string name="systemSequenceIndexName">SYSTEM_SUDOKU</string>
+    
+    <string-array name="tableColumnsSystemTable">
+        <item>INDEX</item>
+        <item>SUDOKU_NUMBERS</item>
+        <item>LEVEL</item>
+    </string-array>
+
+	<string name="createSystemSudokuTable">CREATE TABLE "SYSTEM_SUDOKU" ("SUDOKU_INDEX" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE , "SUDOKU_NUMBER" VARCHAR NOT NULL , "LEVEL" INTEGER);</string>
+	
+	<string name="createIndexSequence">create sequence if not exists indexSequence</string>
+    
+	<string-array name="valuesSystemTable">
+	    <item>009600000302000000080900372430000800200050006006000014573002090000000103000009500</item>
+	    <item>105709006000000000007003409309060001000302000400070605501800900000000000800605302</item>
+	    <item>800600200000052000060004070000000040400009000502046100000700036008000002041060800</item>
+	</string-array>
+</resources>

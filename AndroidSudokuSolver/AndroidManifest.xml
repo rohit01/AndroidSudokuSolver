@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rohit.sudoku"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:icon="@drawable/sudoku_icon"
+        android:label="@string/app_name" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".HomeScreenActivity"
+            android:theme="@android:style/Theme.Wallpaper" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".SudokuSolverActivity"
+            android:theme="@android:style/Theme.Wallpaper" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".How2PlayActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".SudokuRulesActivity"
+            android:theme="@android:style/Theme.Wallpaper" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".SelectLevelActivity"
+            android:theme="@android:style/Theme.Wallpaper" >
+        </activity>
+    </application>
+
+</manifest>

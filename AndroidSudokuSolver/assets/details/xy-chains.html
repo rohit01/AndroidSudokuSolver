@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - XY Chains</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+	      <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - XY Chains </h2>
+	 <p class="style13" align="justify">This is a technique that allows you to make eliminations by following a chain of cells that have only two candidates each.</p>
+          <p class="style13" align="justify">Consider the following puzzle fragment:</p>
+          <p class="style13" align="justify"><img src="xy-chains_files/xy_chains.jpg" height="83" width="388"></p>
+          <p class="style13" align="justify">(The numbers in curly brackets { } are the candidates for the cell.)</p>
+          <p class="style13" align="justify">We can build up an implication chain thus:</p>
+          <p class="style13" align="justify">if r1c1 = 3 then r1c5 = 7, so r2c6 = 6, so r2c8 = 8, so r3c9 = 1 </p>
+          <p class="style13" align="justify">So we know that either r1c1
+ is 1, or if r1c1 is 3, then r3c9 must be 1. So any cells that share a 
+unit with both of these cells can have 1 eliminated. These are the cells
+ marked by the asterisks in the above example. </p>
+          <p class="style13" align="justify">More generally, as long as 
+the same number is "unused" at both ends of the chain, then this 
+technique allows the elimination of that number for any cells that share
+ a unit with both end cells</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

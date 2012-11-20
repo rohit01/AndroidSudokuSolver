@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, CalculatorActivity!</string>
+    <string name="app_name">Sudoku Solver</string>
+	<item type="string" name="databaseVersion" format="integer">1</item>
+        
+</resources>

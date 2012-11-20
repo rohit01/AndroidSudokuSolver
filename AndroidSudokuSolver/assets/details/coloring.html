@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - Colouring</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+		<tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - Colouring </h2>
+          <p class="style13" align="justify">Colouring is a technique 
+similar to forcing chains in that it looks for chains of connected 
+cells. But while forcing chains consider cells with only two candidates 
+that are connected by sharing a candidate, colouring considers cells 
+where a particular candidate occurs for only two cells in a unit (row, 
+column or block.)</p>
+          <p class="style13" align="justify">Consider this example:</p>
+          <p class="style13" align="justify"><img src="coloring_files/col1.jpg" height="245" width="298"></p>
+          <p class="style13" align="justify">(Note: The 1s in brackets 
+{1} mark the cells where 1 appears as a candidate (along with other 
+candidates) - they do not show the cell contents.) This example contains
+ two separate conjugate chains - marked by orange/green and pink/blue. 
+We're only interested in part of the orange/green chain, as colouring 
+can show that r8c4 cannot be a 1, by considering the chain r8c3 =&gt; 
+r4c3 =&gt; r5c1 =&gt; r5c4. The logic goes like this:</p>
+          <p class="style13" align="justify">if r8c3 is 1 then<br>
+            r8c4 cannot be 1 as both cells occupy the same row.</p>
+          <p class="style13" align="justify">if r8c3 is not 1 then<br>
+            r4c3 must be 1 (because column three must contain a 1 somewhere), so<br>
+            r5c1 cannot be 1, as it is in the same block, so<br>
+            r5c4 must be 1 (because row five must contain a 1 somewhere), so<br>
+            r8c4 cannot be 1.<br>
+            So, in either case, we've shown that r8c4 cannot be 1, we've eliminated a candidate.</p>
+          <p class="style13" align="justify">The conjugate chain for the
+ above example is r8c3 =&gt; r4c3 =&gt; r5c1 =&gt; r5c4. Since this is a
+ chain of conjugate cells, the links have alternate truth states - 
+indicated by the green and orange shading in the above example, either 
+the green cells must be true, that is, hold a 1, or the orange cells, 
+but not both. Any other cells in the grid that share a unit with both a 
+link having a true state, and a link having a false state, cannot hold 
+the candidate and that candidate can be eliminated. This is how 1 was 
+eliminated for r8c4 above.</p>
+          <p class="style13" align="justify">Here's another example:</p>
+          <p class="style13" align="justify"><img src="coloring_files/col2.jpg" height="248" width="298"></p>
+          <p class="style13" align="justify">In this example, we can 
+show that the blue cells cannot hold the 8. This is because if r9c5 
+holds 8, then, following the conjugate chain, so must r8c4, and since 
+both cells are in the same block, they can't both hold 8. This means 
+that none of the blue cells can hold 8, and so all the pink cells must. 
+Note r4c4 and r8c4, and r9c5 and r9c8 are not conjugates, and so cannot 
+be used to colour each other, because of the candidate 8 in r9c4, </p>
+          <p class="style13" align="justify">When a unit has only two 
+cells with a particular candidate, those cells are "conjugates" of each 
+other, and are said to be "strongly linked". From the rule of Sudoku, we
+ know that one of these cells must hold the number, and other cannot. 
+Conversely, if we know that one of the cells cannot hold the number, 
+then the other must. This allows us to form chains of cells, with 
+successive cells having alternate "colours". (The term "colouring" is 
+used because the technique is analogous to marking up the grid using 
+coloured pens.) We don't know which colour represents the true state, 
+but examination of the chain may enable us to make deductions leading to
+ the elimination of candidates. </p>
+          <p class="style13" align="justify">Multi-Colouring: It is sometimes possible to connect together apparently separate chains.</p>
+          <p class="style13" align="justify"><img src="coloring_files/col3.jpg" height="245" width="298"></p>
+          <p class="style13" align="justify">The separate conjugate 
+chains are indicated by different colour shading of the cell background 
+(Note: this is different from the other examples, where colours indicate
+ alternative conjugate cells). Take a close look at the pink and green 
+chains, because they can be joined together. Cells r8c2 and r8c9 are 
+weakly linked. They're not conjugates, or strongly linked, as there is 
+another cell with a candidate 4 in the same row. Weakly linked cells 
+means that one being true will cause the other to be false, but one 
+being false does not cause the other to be true. The pink/green chains 
+both have two cells that are weakly linked to cells in the other chain, 
+r8c2 and r8c9, and also r5c2 and r5c8. What's more, these cells are 
+linked to opposite links in the true/false alternate states (indicated 
+by the red/black colouring of the 4s.) So, if r5c2 is true, then r5c8 is
+ false, and then, because of the green conjugate chain, r8c9 is true. 
+Alternatively, if r5c2 is false, then because of the pink conjugate 
+chains, r7c7 is true, and so r8c9 is false, and then, because of the 
+green conjugate chain, r5c8 is true. In other words, the two weak links 
+have now joined the two separate chains into one strongly linked one. 
+The net effect in the above example is that the candidate 4s in r5c3 and
+ r8c7 can both be eliminated as they both share units with strongly 
+conjugated cells. </p>
+          <p class="style13" align="justify">This technique is known as 
+"simple colouring.", and "multi-colouring" when apparently separate 
+colouring chains can be joined. There are also other colouring 
+techniques, for example "super-colouring", a technique that makes 
+deductions by combining the implications from conjugates of all 
+candidates for all cells, although this technique is beyond the ability 
+of most, if not all, human solvers.</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

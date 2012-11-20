@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - X-wing</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+		      <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - X-wing </h2>
+	 <p class="style13" align="justify">In the partial puzzle 
+below, the only cells in rows one and nine that can contain a 9 are 
+those marked. (The other cells in these rows are either already 
+occupied, or else cannot contain a 9 because there are already 9s in the
+ same column.) Since there must be a 9 in both row one and row nine, but
+ they cannot occupy the same column, it follows that either the top-left
+ and bottom-right marked cells contain the 9s, or the bottom-left and 
+top-right cells do. (It can't be the bottom-right and top-right, nor the
+ bottom-left and top-left, as then there would be two 9s in the same 
+column. Similarly, it can't be top-left and top-right, nor bottom-left 
+and bottom-right as then there would be two 9s in the same row.) So, we 
+can't say whether the 9s are in top-left and bottom-right, or 
+bottom-left and top-right, but either way, it excludes 9s from the other
+ cells in both columns. The end result is that 9 can be eliminated from 
+the candidates for other cells in both of the affected columns.</p>
+          <p class="style13" align="justify"><img src="x-wing_files/x_wing.jpg" height="245" width="298"></p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

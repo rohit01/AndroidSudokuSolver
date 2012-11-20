@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - Block / Block Interactions</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><h2 class="style7">Sudoku Solving Techniques - Block /
+						Block Interactions</h2>
+					<p class="style13" align="justify">Firstly, If a number appears
+						as candidates for only two cells in two different blocks, but both
+						cells are in the same column or row, it is possible to remove that
+						number as a candidate for other cells in that column or row.</p>
+					<p class="style13" align="justify">For example, in the partial
+						puzzle below, the cells marked with * are the only cells in blocks
+						two and five that can contain a 3. This means the 3 in column four
+						must be in block two or five, as must the 3 in column five. As
+						there can be no other 3s in columns four or five, 3 can be
+						eliminated as a candidate for the cells in these columns for block
+						eight.</p>
+					<p class="style7" align="justify">
+						<img src="block_block_files/block_block1.jpg" height="245"
+							width="298">
+					</p>
+					<p class="style13" align="justify">Secondly, in the example
+						below, the cells marked with * are the only cells in blocks four
+						and six that can contain a 2. This means that 2 can be eliminated
+						from the candidates for rows four and six in block five.</p>
+					<p class="style13" align="justify">
+						<span class="style7"><img
+							src="block_block_files/block_block2.jpg" height="245"
+							width="298"></span>
+					</p>
+					<p class="style7" align="justify">
+						<a href="../how2play.html">Back
+							to Sudoku Solving Techniques</a>
+					</p>
+					<p class="style7" align="justify">&nbsp;</p></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

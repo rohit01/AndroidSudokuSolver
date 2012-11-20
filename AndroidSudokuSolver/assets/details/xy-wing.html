@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - XY - Wing</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+	      <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - XY-Wing </h2>
+	 <p class="style13" align="justify">This is similar to a short <a href="http://www.sudokuonline.us/forcing_chain.php">forcing chain</a>
+ consisting of two links for each candidate, but instead of placing a 
+number, it allows for candidate elimination. The name is derived partly 
+from the usual explanation, and partly because it requires a cell fewer 
+than X-wing, and so could be a Y-wing.</p>
+          <p class="style13" align="justify">In the partial puzzle below, consider the cells that have only the candidates shown:</p>
+          <p class="style13" align="justify"><img src="xy-wing_files/xy1.jpg" height="164" width="198"></p>
+          <p class="style13" align="justify">It can be easily seen that whichever value is in XY, the cell marked with the asterisk cannot be Z. </p>
+          <p class="style13" align="justify">if XY = X, then XZ = Z, so * cannot be Z<br>
+            if XY = Y, then YZ = Z, so * cannot be Z<br>
+            This allows Z to be eliminated from the candidates for the marked cell.</p>
+          <p class="style13" align="justify">The cells don't need to 
+form a perfect rectangle, but XY and XZ, and XY and YZ need to be linked
+ by being in the same unit (that is the same column, row or block.) Once
+ you've got this arrangement, you can eliminate Z from the candidates of
+ all cells that occupy the intersection of the units containing XZ and 
+YZ. </p>
+          <p class="style13" align="justify">Other possible combinations:</p>
+          <p class="style13" align="justify"><img src="xy-wing_files/xy2.jpg" height="83" width="198"></p>
+          <p class="style13" align="justify"><img src="xy-wing_files/xy3.jpg" height="83" width="198"></p>
+          <p class="style13" align="justify">The astute among you will 
+notice both the above examples have XY, XZ and YZ in the same relative 
+locations, and so can be combined to give:</p>
+          <p class="style13" align="justify"><img src="xy-wing_files/xy4.jpg" height="83" width="198"></p>
+          <p class="style13" align="left">All the cells marked with an asterisk can have Z removed from their candidates.</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

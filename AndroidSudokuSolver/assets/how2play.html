@@ -1,0 +1,165 @@
+<html><head>
+
+
+<title>Sudoku Solving Techniques</title>
+
+</head><body topmargin="0" background="sudoku_solving_techniques.php_files/bg.gif">
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link, a.mainlevel:visited {
+  font-family      : arial;
+  text-align       : left;
+  display          : block;
+  font-size        : 12px;
+  border-top       : 2px solid #003c7e;
+  border-bottom    : 2px solid #003c7e;
+  border-left	   : 2px solid #003c7e;
+  border-right	   : 2px solid #003c7e;
+  background-color : #2280c0;
+  font-weight      : bold;
+  padding          : 2px 0px 2px 0px;
+  color            : #FFFFFF;
+  text-decoration  : none;
+  width            : 140px;
+  text-indent      : 2px;
+}
+a.mainlevel:hover {
+  text-align       : left;
+  background-color : #c8e7f0;
+  font-size        : 12px;
+  color            : #003c7e;
+  font-weight      : bold;
+  text-decoration  : none;
+  text-indent      : 2px;
+}
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+a:link {
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a:visited {
+	color: #003c7e;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+a:active {
+	text-decoration: underline;
+}
+.style7 {color: #003c7e}
+.style9 {
+	color: #003c7e;
+	font-size: 12px;
+	font-weight: bold;
+}
+.style11 {
+	color: #003c7e; 
+	font-weight: bold;
+	text-decoration:underline; }
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</table>
+	</td>
+    <td valign="top" width="636"><table width="100%" align="center" border="0" cellpadding="5" cellspacing="0">
+      <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques </h2>
+          <p class="style7" align="left"><strong>TIP</strong>: Even with all these techniques, the best way to solve these puzzles is to practice, practice and practice more... </p>
+          <ol type="1">
+		  <li class="style7"><span class="style11"><a href="details/naked_single.html">Naked Single</a></span><br>
+		    It is often the case that a cell can only possibly take a single 
+value, when the contents of the other cells in the same row, column and 
+block are considered. <span class="style9">(<a href="details/naked_single.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/hidden_single.html">Hidden Single</a></span><br>
+		    If a cell is the only one in a row, column or block that can take a particular value, then it must have that value. <span class="style9">(<a href="details/hidden_single.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/block_column.html">Block and Column / Row Interactions</a></span><br>
+		    Sometimes, when you examine a block, you can determine that a 
+certain number must be in a specific row or column, even though you 
+cannot determine exactly which cell in that row or column. <span class="style9">(<a href="details/block_column.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/block_block.html">Block / Block Interactions</a></span><br>
+		    If a number appears as candidates for two cells in two different 
+blocks, but both cells are in the same column or row, it is possible to 
+remove that number as a candidate for other cells in that column or row.
+ <span class="style9">(<a href="details/block_block.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/naked_subset.html">Naked Subset</a></span><br>
+		    If two cells in the same row, column or block have only the same 
+two candidates, then those candidates can be removed from other cells in
+ that row, column or block. This technique can also be extended to cover
+ more than two cells. <span class="style9">(<a href="details/naked_subset.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/hidden_subset.html">Hidden Subset</a></span><br>
+		    This technique is very similar to naked subsets, but instead of 
+affecting other cells with the same row, column or block, candidates are
+ eliminated from the cells that hold the hidden subset. <span class="style9"><br>
+		    (<a href="details/hidden_subset.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/x-wing.html">X-Wing</a></span><br>
+		    This is another method of reducing the candidates when two rows have the same candidate only in the same two columns. <span class="style9">(<a href="details/x-wing.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/swordfish.html">Swordfish</a></span><br>Swordfish is on the same principle as X-wings, but extended to three columns or rows. <span class="style9"><br>
+		  (<a href="details/swordfish.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/xy-wing.html">XY-Wing</a></span><br>
+		    This is similar to a short forcing chain with only two links for each candidate. <span class="style9">(<a href="details/xy-wing.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/xyz-wing.html">XYZ-Wing</a></span><br>
+		    This is a variation of an XY-wing. <span class="style9">(<a href="details/xyz-wing.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/coloring.html">Colouring</a></span><br>
+		    Colouring considers cells where a particular candidate occurs for only two cells in a unit. <br>
+		    <span class="style9">(<a href="details/coloring.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/remote_pairs.html">Remote Pairs</a></span><br>
+		    This technique is a combination of naked pairs and colouring. <span class="style9">(<a href="details/remote_pairs.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/xy-chains.html">XY Chains</a></span><br>
+		    XY chains allow you to make eliminations by following a chain of cells that have only two candidates each. <span class="style9">(<a href="details/xy-chains.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/forcing_chain.html">Forcing Chains</a></span><br>
+		    Forcing chains is a technique that allows you to deduce with 
+certainty the content of a cell from considering the implications 
+resulting from the placement of each of another cell's candidates. <span class="style9">(<a href="details/forcing_chain.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/nishio.html">Nishio</a></span><br>
+		    This is limited form of trial and error. It asks what are the 
+effects of putting a particular number into a particular cell? <span class="style9">(<a href="details/nishio.html">Read More...</a>)</span><br>
+		    <br>
+		  </li>
+		  <li class="style7"><span class="style11"><a href="details/trial_and_error.html">Trial and Error</a></span><br>
+		    There are some that would argue trial and error is not a logical 
+technique, and is no better than guessing. When further moves seem 
+impossible, trial and error may be the only way forward. <span class="style9">(<a href="details/trial_and_error.html">Read More...</a>)</span></li>
+		  </ol>
+          <p>&nbsp;</p></td>
+      </tr>
+    </tbody></table>
+</body>
+</html>

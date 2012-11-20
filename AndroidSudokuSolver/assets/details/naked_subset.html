@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - Naked Subset</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+		      <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - Naked Subset </h2>
+	 <p class="style13" align="justify">This technique is known as 
+"naked pair" if two candidates are involved, "naked triplet" if three, 
+or "naked quad" if four. It is sometimes also called "disjoint subset".</p>
+          <p class="style13" align="justify">If two cells in the same 
+row, column or block have only the same two candidates, then those 
+candidates can be removed from the candidates of the other cells in that
+ row, column or block. This is because one of the cells must hold one of
+ the candidates, and the other cell must hold the other candidate - so 
+neither can go in any of the other cells.<br>
+            This technique can be applied to more than two cells at 
+once, but in all cases, the number of cells must be the same as the 
+number of different candidates.</p>
+          <p class="style13" align="justify">For example, consider a row that has the candidates:</p>
+          <p class="style13" align="justify">{1, 7}, {6, 7, 9}, {1, 6, 7, 9}, {1, 7}, {1, 4, 7, 6}, {2, 3, 6, 7}, {3, 4, 6, 8, 9}, {2, 3, 4, 6, 8}, {5}</p>
+          <p class="style13" align="justify">(The single {5} indicates 
+that this cell already holds the value 5.) You can see that there are 
+two cells that have the same two candidates 1 and 7. One of these cells 
+must hold the 1, and the other cell must hold the 7, although we don't 
+know which is which. So 1 and 7 can be removed from the candidates for 
+the other cells. This reduces the candidates to:</p>
+          <p class="style13" align="justify">{1, 7}, {6, 9}, {6, 9}, {1, 7}, {4, 6}, {2, 3, 6}, {3, 4, 6, 8, 9}, {2, 3, 4, 6, 8}, {5}</p>
+          <p class="style13" align="justify">So now there are two cells that have 6 and 9 as the only candidates. Repeating the process for these numbers leaves:</p>
+          <p class="style13" align="justify">{1, 7}, {6, 9}, {6, 9}, {1, 7}, {4}, {2, 3}, {3, 4, 8}, {2, 3, 4, 8}, {5}</p>
+          <p class="style13" align="justify">Now we have a cell with a 
+single candidate - i.e. we have reduced the candidates to the extent 
+that we have determined the only value that can possibly go into this 
+cell.</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+

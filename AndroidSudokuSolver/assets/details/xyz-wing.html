@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Sudoku Solving Techniques - XYZ - Wing</title>
+<!--menu style sheet start-->
+<style type="text/css">
+<!--
+a.mainlevel:link,a.mainlevel:visited {
+	font-family: arial;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	border-top: 2px solid #003c7e;
+	border-bottom: 2px solid #003c7e;
+	border-left: 2px solid #003c7e;
+	border-right: 2px solid #003c7e;
+	background-color: #2280c0;
+	font-weight: bold;
+	padding: 2px 0px 2px 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 140px;
+	text-indent: 2px;
+}
+
+a.mainlevel:hover {
+	text-align: left;
+	background-color: #c8e7f0;
+	font-size: 12px;
+	color: #003c7e;
+	font-weight: bold;
+	text-decoration: none;
+	text-indent: 2px;
+}
+
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a:link {
+	color: 003c7e;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: 003c7e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.style7 {
+	color: #003c7e
+}
+
+.style12 {
+	font-family: Tahoma
+}
+
+.style13 {
+	color: #003c7e;
+	font-family: Tahoma;
+}
+-->
+</style>
+<!--menu style sheet end-->
+
+
+</head>
+<body topmargin="0" background="block_block_files/bg.gif">
+	<table width="780" align="justify" bgcolor="#ffffff" border="0"
+		cellpadding="0" cellspacing="0">
+	 <tbody><tr>
+        <td><h2 class="style7">Sudoku Solving Techniques - XYZ-Wing </h2>
+	  <p class="style13" align="justify">This is a variation of an <a href="http://www.sudokuonline.us/xy-wing.php">XY-wing</a>.
+ In the partial puzzle below, consider the cells that have only the 
+candidates shown. Any cells that share a unit with all three cells XYZ, 
+XY and YZ, can have Z eliminated from their candidates.</p>
+          <p class="style13" align="justify"><img src="xyz-wing_files/xyz.jpg" height="83" width="198"></p>
+          <p class="style13" align="justify">It can be easily seen that whichever value is in XYZ, the cell marked with the asterisk cannot be Z. </p>
+          <p class="style13" align="justify">if XYZ = X, then XZ = Z, so * cannot be Z<br>
+            if XYZ = Y, then YZ = Z, so * cannot be Z<br>
+            if XYZ = Z, then * cannot be Z<br>
+            This allows Z to be eliminated from the candidates for the marked cell.</p>
+          <p class="style7" align="justify"><a href="../how2play.html">Back to Sudoku Solving Techniques</a> </p>
+          <p class="style7" align="justify">&nbsp;</p></td>
+      </tr>
+    </tbody>
+	</table>
+</body>
+</html>
+
